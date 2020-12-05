@@ -4,7 +4,8 @@ import router from '@/router'
 
 import { FontAwesomeIcon } from '@/libs/icon'
 
-require('@/assets/scss/global.scss')
+// require('@/assets/scss/global.scss')
+import '@/assets/scss/global.scss'
 
 const app = createApp(App)
 

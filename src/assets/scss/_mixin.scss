@@ -1,4 +1,35 @@
+/* z-index */
+$layer: (
+    // modal : 100,
+    header : 20,
+    header-btn: 30,
+    // tooltip : 10,
+    // default : 1
+);
 
+@mixin z-index($key) {
+    z-index: map-get($layer, $key);
+}
 
+/* media query */
+$breakpoints:(
+  lg: $width-pc, // pc
+  md: $width-tab, // tab
+  sm: $width-sp, // sp
+) !default;
 
+@mixin media-up($breakpoint: lg) {
+  @media ( min-width: calc(#{map-get($breakpoints, $breakpoint)} + 1px) ) {
+    @content;
+  }
+}
+@mixin media-down($breakpoint: lg) {
+  @media ( max-width: #{map-get($breakpoints, $breakpoint)} ) {
+    @content;
+  }
+}
 
+/* hover */
+@mixin hover($hover-color: $color-main) {
+    background-color: rgba($hover-color, 0.1);
+}

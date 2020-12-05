@@ -1,7 +1,12 @@
-/* FONT */
+/* font */
 $font-family: Avenir, Helvetica, Arial, sans-serif;
 
-/* COLOR */
+/* width */
+$width-pc: 1024px;
+$width-tab: 680px;
+$width-sp: 480px;
+
+/* color */
 // base
 $color-base: #FCFEF3;
 
@@ -13,10 +18,12 @@ $color-accent: #FBEC9B;
 
 // text
 $color-text: #333333;
-$color-text-inverse: #FCFEF3;
 
 // icon
 $color-icon: #896565;
 
 // border
 $color-border: #736F6F;
+
+// inverse
+$color-inverse: #FCFEF3;
