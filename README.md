@@ -1,4 +1,5 @@
 # portfolio
+My portfolio. it contains profile, creation, blog and etc..
 
 ## Project setup
 ```

@@ -1,7 +1,16 @@
-import { createApp } from "vue";
-import App from "./App.vue";
-import router from "./router";
+import { createApp } from 'vue'
+import App from '@/App.vue'
+import router from '@/router'
 
-createApp(App)
-  .use(router)
-  .mount("#app");
+import { FontAwesomeIcon } from '@/libs/icon'
+
+require('@/assets/scss/global.scss')
+
+const app = createApp(App)
+
+app.use(router)
+
+// global component
+app.component('app-icon', FontAwesomeIcon)
+
+app.mount('#app')
