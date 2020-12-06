@@ -1,11 +1,10 @@
 <template>
   <nav :class="[$options.name, { open: isOpen }]">
     <ul class="nav-menu">
-      <li v-for="(_, index) in 5" :key="index" class="nav-menu__item">
-        <a class="page-link" href="">
-          <app-icon class="page-link__icon" icon="user" />
-          Test
-        </a>
+      <li v-for="(page, index) in pages" :key="index" class="nav-menu__item">
+        <router-link class="page-link" :to="page.url">
+          <app-icon class="page-link__icon" :icon="page.icon" />{{ page.label }}
+        </router-link>
       </li>
     </ul>
   </nav>
@@ -20,6 +19,17 @@ export default defineComponent({
     isOpen: {
       type: Boolean,
       default: false
+    }
+  },
+  setup() {
+    const pages = [
+      { label: 'About', url: '/about', icon: 'user' },
+      { label: 'Work', url: '/work', icon: 'user' },
+      { label: 'Contact', url: '/contact', icon: 'user' }
+    ]
+
+    return {
+      pages
     }
   }
 })
