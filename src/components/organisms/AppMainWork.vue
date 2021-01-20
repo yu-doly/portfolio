@@ -1,5 +1,5 @@
 <template>
-  <app-main-section title="Work">
+  <app-main-section title="Work" url="/work">
     作品カードを表示する
   </app-main-section>
 </template>

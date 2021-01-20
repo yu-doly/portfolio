@@ -1,5 +1,5 @@
 <template>
-  <app-main-section :class="$options.name" title="About me">
+  <app-main-section :class="$options.name" title="About me" url="/about">
     <div :class="`${$options.name}__content content`">
       <img class="content__image" src="@/assets/img/logo.png" alt="chami" />
       <div class="content__text">

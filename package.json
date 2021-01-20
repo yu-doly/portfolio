@@ -8,7 +8,8 @@
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint",
-    "format": "vue-cli-service lint --fix"
+    "format": "vue-cli-service lint --fix",
+    "deploy": "sh deploy.sh"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
@@ -40,6 +41,7 @@
     "prettier": "^1.19.1",
     "sass-loader": "^7.1.0",
     "typescript": "~3.9.3",
-    "vue-jest": "^5.0.0-0"
+    "vue-jest": "^5.0.0-0",
+    "vue-svg-loader": "^0.17.0-beta.2"
   }
 }

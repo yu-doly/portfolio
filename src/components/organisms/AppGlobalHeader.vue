@@ -2,6 +2,9 @@
   <header :class="$options.name">
     <app-btn-menu class="btn-menu" @click="onClickToggleMenu" />
     <app-nav :is-open="showMenu" />
+    <router-link class="home" to="/">
+      <img src="@/assets/img/logo.png" alt="Home" />
+    </router-link>
   </header>
 </template>
 
@@ -31,6 +34,8 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .app-global-header {
+  position: relative;
+
   @include z-index(header);
   width: 100%;
   background-color: $color-main;
@@ -45,6 +50,15 @@ export default defineComponent({
     .btn-menu {
       display: none;
     }
+  }
+
+  .home {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 48px;
+    height: 48px;
   }
 }
 </style>

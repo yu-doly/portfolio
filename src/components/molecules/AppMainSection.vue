@@ -1,6 +1,9 @@
 <template>
   <section :class="$options.name">
-    <h2 v-if="title" :class="`${$options.name}__title`">{{ title }}</h2>
+    <h2 v-if="title" :class="`${$options.name}__title`">
+      <component :is="url ? 'a' : 'span'" :href="url">{{ title }}</component>
+    </h2>
+    <div v-if="text" :class="`${$options.name}__text`" v-text="text" />
     <div :class="`${$options.name}__content`">
       <slot />
     </div>
@@ -14,6 +17,14 @@ export default defineComponent({
   name: 'app-main-section',
   props: {
     title: {
+      type: String,
+      default: ''
+    },
+    url: {
+      type: String,
+      default: ''
+    },
+    text: {
       type: String,
       default: ''
     }
@@ -31,11 +42,15 @@ export default defineComponent({
   }
 
   &__title {
-    font-size: 2.4rem;
+    font-size: 3.2rem;
     font-weight: bold;
     text-align: center;
     color: $color-text-title;
-    margin-bottom: 16px;
+    margin-bottom: 32px;
+  }
+  &__text {
+    font-size: 1.4rem;
+    margin-bottom: 32px;
   }
   &__content {
   }

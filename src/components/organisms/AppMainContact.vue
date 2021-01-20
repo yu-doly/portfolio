@@ -1,5 +1,5 @@
 <template>
-  <app-main-section title="Contact">
+  <app-main-section title="Contact" url="/contact">
     簡単な問い合わせフォームを作成する
   </app-main-section>
 </template>
